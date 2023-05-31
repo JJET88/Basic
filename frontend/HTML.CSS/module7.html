@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS module7.html</title>
+    <style>
+        .transform {
+            width: 140px;
+            height: 140px;
+            background-color: red;
+            transition-duration: 0.5s;
+        }
+
+        .translating:hover {
+            background-color: aqua;
+            transform: translate(30px, 60px);
+        }
+
+        .Rotating:hover {
+            background-color: pink;
+            transform: rotate(45deg);
+        }
+
+        .Scaling:hover {
+            background-color: blueviolet;
+            transform: scale(.6);
+        }
+
+        .Skewing:hover {
+            background-color: chartreuse;
+            transform: skew(30deg, 30deg);
+        }
+
+        .Matrixing:hover {
+            background-color: rgb(10, 52, 80);
+            transform: matrix(1, 0.5, 0.5, 1, 0, 0) skew(30deg, 30deg);
+        }
+
+        .rotateX:hover {
+            background-color: darkgreen;
+            transform: rotateX(140deg);
+        }
+
+        .rotateY:hover {
+            background-color: gold;
+            transform: rotateY(140deg);
+        }
+
+        .rotateZ:hover {
+            background-color: lightseagreen;
+            transform: rotateZ(90deg);
+        }
+
+        .cube {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+
+        .cube .side {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .cube .front {
+            transform: translateZ(100px);
+            background-color: blue;
+        }
+
+        .cube .back {
+            transform: translateZ(-100px) rotateY(180deg);
+            background-color: green;
+        }
+
+        .cube .right {
+            transform: rotateY(-90deg) translateZ(100px);
+            background-color: red;
+        }
+
+        .cube .left {
+            transform: rotateY(90deg) translateZ(100px);
+            background-color: yellow;
+        }
+
+        .cube .top {
+            transform: rotateX(-90deg) translateZ(100px);
+            background-color: orange;
+        }
+
+        .cube .bottom {
+            transform: rotateX(90deg) translateZ(100px);
+            background-color: purple;
+        }
+
+        .cube:hover {
+            transform: rotateX(30deg) rotateY(30deg);
+        }
+    </style>
+</head>
+
+<body>
+    <h2>2D Transform</h2>
+    <h2>Original</h2>
+    <div class="transform"></div>
+    <h3>Translate</h3>
+    <div class="transform translating">translate</div>
+
+    <h2>Rotate</h2>
+    <div class="transform Rotating">rotate 45deg</div>
+    <h2>Scale</h2>
+    <div class="transform Scaling">scale</div>
+    <h2>Skew</h2>
+    <div class="transform Skewing">skew</div>
+    <h2>Matrix</h2>
+    <div class="transform Matrixing">matrix</div>
+
+    <h2>RotateX</h2>
+    <div class="transform rotateX">rotateX</div>
+    <h2>RotateY</h2>
+    <div class="transform rotateY">rotateY</div>
+
+    <h2>RotateZ</h2>
+    <div class="transform rotateZ">rotateZ</div>
+    <h2>Cube</h2>
+    <div class="cube">
+        <div class="side front">Front</div>
+        <div class="side back">Back</div>
+        <div class="side right">Right</div>
+        <div class="side left">Left</div>
+        <div class="side top">Top</div>
+        <div class="side bottom">Bottom</div>
+    </div>
+
+
+
+</body>
+
+</html>

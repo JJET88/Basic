@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Type</title>
+    <style>
+        
+        textarea {
+            background-color: lightskyblue;
+            border-radius: 4px;
+            color: darkblue;
+            border: none;
+        
+            /*
+            resize: none;
+            */
+
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Text</h2>
+
+    <input type="text" id="text-id"><br><br>
+    <button z="getTextValue();">Get Value</button>
+
+    <h2>Checkbox</h2>
+    <input type="checkbox" id="checkbox-id"><br><br>
+    <button onclick="getCheckboxValue();">Get Value</button>
+    <h2>Color</h2>
+    <input type="color" id="color-id"><br><br>
+    <button onclick="getColorValue();">Get Value</button>
+    <h2>Date</h2>
+    <input type="date" id="date-id"><br><br>
+    <button onclick="getDateValue();">Get Value</button>
+    <h2>Date Time Local</h2>
+    <input type="datetime-local" id="datetimelocal-id"><br><br>
+    <button onclick="getDateTimeLocal();">Get Value</button>
+    <h2>Email</h2>
+    <form action="page-handler.html">
+        <input type="email" id="email-id">
+        <input type="submit">
+        <br><br>
+        <button onclick="getEmailValue();">Get Value</button>
+    </form>
+
+    <!--File-->
+    <h2>Hidden</h2>
+    <input type="hidden" id="hidden-id" value="I'm hidden"><br><br>
+    <button onclick="getHiddenValue();">Get Value</button>
+    <h2>Month</h2>
+    <input type="month" id="month-id"><br><br>
+    <button onclick="getMonthValue();">Get Value</button>
+
+    <h2>Number</h2>
+    <input type="number" id="number-id"><br><br>
+    <button onclick="getNumberValue();">Get Value</button>
+
+    <h2>Password</h2>
+    <form action="page-handler.html">
+        <input type="password" id="password-id">
+        <input type="submit"><br><br>
+        <button onclick="getPasswordValue();">Get Value</button>
+    </form>
+
+    <h2>Range</h2>
+    <input type="range" id="range-id"><br><br>
+    <button onclick="getRangeValue();">Get Value</button>
+
+    <h2>Search</h2>
+    <input type="search" id="search-id"><br><br>
+    <button onclick="getSearchValue();">Get Value</button>
+
+    <h2>Tel</h2>
+    <form action="page-handler.html">
+        <input type="tel" id="tel-id">
+        <input type="submit"><br><br>
+        <button onclick="getTelValue();">Get Value</button>
+    </form>
+
+    <h2>Time</h2>
+    <input type="time" id="time-id"><br><br>
+    <button onclick="getTimeValue();">Get Value</button>
+
+    <h2>UR</h2>
+    <input type="url" id="url-id"><br><br>
+    <button onclick="getUrlValue();">Get Value</button>
+
+    <h2>Week</h2>
+    <input type="week" id="week-id"><br><br>
+    <button onclick="getWeekValue();">Get Value</button>
+
+    <!--Textarea-->
+    <h2>Textarea</h2>
+    <textarea rows="4" cols="10" placeholder="Write your comments"></textarea>
+
+    <h2>Dropdown</h2>
+    <select id="dropdown-id">
+        <option value="Apple">Apple</option>
+        <option value="Orange">Orange</option>
+        <option value="Avocado">Avocado</option>
+    </select><br><br>
+    <button onclick="getDropdownValue();">Get Value</button>
+    <!--Sepcial Function-->
+    <h2>Radio</h2>
+    <input type="radio" name="gender" value="male" id="male">
+    <label for="male">Male</label>
+
+    <input type="radio" name="gender" value="female" id="female">
+    <label for="female">Female</label><br><br>
+    <button onclick="getRadioValue();">Get Value</button>
+
+    <h2>Multiple Dropdown</h2>
+    <select multiple id="multidropdown-id" >
+        <option value="Apple">Apple</option>
+        <option value="Orange">Orange</option>
+        <option value="Avocado">Avocado</option>
+        <option value="Banana">Banana</option>
+        <option value="Grape">Grape</option>
+        <option value="Watermelon">Watermelon</option>
+    </select><br><br>
+    <button onclick="getMultiDropdownValue();">Get Value</button>
+     
+
+
+
+
+    <!--JavaScript-->
+
+    <script>
+        function getTextValue() {
+            alert(document.getElementById('text-id').value)
+        }
+        function getCheckboxValue() {
+            alert(document.getElementById("checkbox-id").checked)
+        }
+        function getColorValue() {
+            alert(document.getElementById("color-id").value)
+        }
+        function getDateValue() {
+            alert(document.getElementById("date-id").value)
+        }
+        function getDateTimeLocal() {
+            alert(document.getElementById("datetimelocal-id").value)
+        }
+        function getEmailValue() {
+            alert(document.getElementById("email-id").value)
+        }
+        function getHiddenValue() {
+            alert(document.getElementById("hidden-id").value)
+        }
+        function getMonthValue() {
+            alert(document.getElementById("month-id").value)
+        }
+        function getNumberValue() {
+            alert(document.getElementById("number-id").value)
+        }
+        function getPasswordValue() {
+            alert(document.getElementById("password-id").value)
+        }
+        function getRangeValue() {
+            alert(document.getElementById("range-id").value)
+        }
+        function getSearchValue() {
+            alert(document.getElementById("search-id").value)
+        }
+        function getTelValue() {
+            alert(document.getElementById("tel-id").value)
+        }
+        function getTimeValue() {
+            alert(document.getElementById("time-id").value)
+        }
+        function getUrlValue() {
+            alert(document.getElementById("url-id").value)
+        }
+        function getWeekValue() {
+            alert(document.getElementById("week-id").value)
+        }
+        function getDropdownValue() {
+            alert(document.getElementById("dropdown-id").value)
+        }
+        //JavaScript Function
+        function getRadioValue() {
+            var radios = document.getElementsByName("gender");   //getElements
+            var numberofradios = radios.length;
+
+            for (var i =0; i < numberofradios; i++) {
+                if (radios[i].checked) {
+                    alert(radios[i].value)
+                }
+            }
+
+        }
+
+      // JSON 
+        function getMultiDropdownValue(){
+            var dropdown = document.getElementById("multidropdown-id").options;
+            var numberofoption = dropdown.length;
+            var value = [];
+            for(var i=0; i < numberofoption; i++) {
+                if(dropdown[i].selected) {
+                    value.push(dropdown[i].value);
+                }
+            }
+            alert(value);                  // alert 
+            alert(JSON.stringify(value));  // Using JSON 
+        }
+
+
+    </script>
+</body>
+
+</html>

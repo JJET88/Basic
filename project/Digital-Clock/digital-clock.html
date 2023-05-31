@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+        #clock{
+          
+            font-size: 30px;
+            text-align: center;
+        }
+        button{
+            text-align: center;
+            border-radius: 25px;
+            cursor: pointer;
+            width: 80px;
+            height: 80px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="clock" >00 : 00 : 00</div>
+    <br>
+    <button onclick="startTime()">Click here</button>
+    
+    <script>
+        function startTime() {
+            var date = new Date();
+            var hour = date.getHours();
+            var minute = date.getMinutes();
+            var second = date.getSeconds();
+            var session = "AM";
+
+            if(hour == 0){
+                hour = 12
+            }
+            if(hour > 12){
+                hour = hour - 12
+                session = "PM"
+            }
+
+            hour = (hour<10)? "0" + hour : hour;
+            minute = (minute<10)? "0" + minute : minute;
+            second = (second<10)? "0" + second: second;
+
+            var timing = hour +":" +minute +":" + second + session;
+
+            document.getElementById("clock").innerHTML= timing;
+            setInterval(startTime,1000)
+
+        }
+        
+   
+
+    </script>
+</body>
+</html>

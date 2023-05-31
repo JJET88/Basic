@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <h1 id="h1" class="h">this is heading1</h1>
+    <p>This is first paragraph</p>
+    <a href="#" class="link">www.example1.com</a>
+    <h1 class="h" >this is heading2</h1>
+    <p>This is second paragraph</p>
+    <a href="#" class="link">www.example2.com</a>
+    <h1 class="h">this is heading3</h1 >
+    <p>This is third paragraph</p>
+    <a href="#" class="link">www.example3.com</a>
+    <h1 class="h">this is heading4</h1 >
+    <p>This is fourth paragraph</p>
+    <a href="#" class="link">www.example4.com</a>
+    <h1 class="h">this is heading5</h1>
+    <p id="p">This is fifth paragraph</p>
+    <a href="#" class="link">www.example5.com</a>
+    <script>
+       document.getElementsByClassName("h")[1].style.color="green";
+       function Break(){
+           document.write("<br>"); 
+       }
+       document.getElementsByTagName("p")[1].style.fontSize ="24px";
+       
+       Break();
+       var link= document.querySelectorAll(".link");
+       for (var i=0; i<link.length; i++){
+           link[i].style.backgroundColor="yellow";
+           link[i].style.fontSize ="15px";
+       }
+
+    </script>
+
+
+</body>
+</html>

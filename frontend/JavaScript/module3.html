@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript module 3</title>
+
+</head>
+
+<body>
+    <h1>Function</h1>
+    <p id="paragraph">Sum will be printed here</p>
+    <button onclick="addNumbers(9, 9)">Clink here to print sum</button>
+    <br><br>
+    <script>
+        function lineBreak() {
+            document.write("<br>");
+        }
+        function writeText(str) {
+            document.write(str);
+        }
+        writeText("Hello World");
+        lineBreak();
+        writeText("Hello JavaScript");
+        lineBreak();
+
+        function addNumbers(num1, num2) {
+            var sum = num1 + num2;
+            // document.write("sum is :" + sum);
+            document.getElementById("paragraph").innerText = sum;
+
+        }
+        // addNumbers(6, 4);j
+        lineBreak();
+        // addNumbers(8, 12);
+        lineBreak();
+
+    </script> 
+    <h1>The Return Statement</h1>
+    <script>
+        function sumNumbers(num1, num2) {
+            var sum = num1 + num2;
+            return sum;
+        }
+        var returnFromSumNumbers = sumNumbers(5, 6);
+        document.write(returnFromSumNumbers + "::Returned Value");
+    </script>
+    <h1>Function Scope</h1>
+    <script>
+        //global variable
+        var fullNameGlobal;
+        function getAge(age) {
+            //local variable   can only use inside the function
+            var fullNameLocal = "John";
+            fullNameGlobal = "David";
+
+            document.write(fullNameLocal + " " + "is" + age + "Year Old");
+            lineBreak();
+        }
+        getAge(33);
+
+        document.write(fullNameGlobal + "From Global");
+    </script>
+
+    <h1>JavaScript Object</h1>
+    <script>
+        var person = {
+            name: "David",
+            gender: "male",
+            age: 30,
+            hobbies: ["coding", "playing chess"],
+            showName: function () {
+                alert(this.name);
+            },
+            showAge: function () {
+                alert(this.age);
+            }
+        }
+        document.write(person.name);
+        lineBreak();
+        document.write(person.age);
+        lineBreak();
+        document.write(person.hobbies);
+        lineBreak();
+        // person.showName();
+        lineBreak();
+
+    </script>
+    <h1>JavaScript Strings</h1>
+    <script>
+        var str1 = "Hello";
+        var str2 = "World";
+        document.write(str1 + " ," + str2);
+        lineBreak();
+    </script>
+    <h1>JS String Methods</h1>
+    <script>
+        var str = "Learn js";
+        // character array
+        var strlen = str.length;
+        document.write(strlen + " string length of " + str);
+        lineBreak();
+        var x = str[6];
+        document.write(x+"&raquo;"+"is in str[6] of" + str );
+        lineBreak();
+        //Position of 
+        var text = "How are you?";
+        var strpos = text.indexOf("you");
+        document.write(strpos + "is index of you in " + text);
+        lineBreak();
+        //Coverting to upper and lower case
+        var upperText = text.toUpperCase();
+        document.write(upperText);
+        lineBreak();
+        var lowerText = text.toLowerCase(); 
+        document.write(lowerText);
+    </script>
+    <h1>JavaScript Numbers</h1>
+    <script>
+    
+        var num1 = 2;     //interger
+        var num2 = 2.5;  //floating point
+        lineBreak();
+        document.write(num1 + num2 );
+
+        document.write("<h2>Strings as Numbers</h2>")
+        var stringNumber = "5" + "25";
+        document.write(stringNumber);
+        // is Nan() method
+        document.write("<h2> Nan() method</h2>")
+        
+        document.write( isNaN(5));
+        lineBreak();
+        document.write(isNaN("5"));
+        lineBreak();
+        document.write(isNaN("hello"));
+        lineBreak();
+    </script>
+    <h1>JavaScript Number Methods</h1>
+    <script>
+        document.write(Number.isInteger(23));
+        lineBreak();
+        document.write(Number.isInteger(23.4));
+        lineBreak();
+        document.write("<h2>parsenInt() Method</h2>");
+        var num1 = "42";
+        document.write(parseInt(num1));
+        lineBreak();
+        var num2 ="34.43";
+        document.write(parseInt(num2));
+        lineBreak();
+        var num3 ="21 days";
+        document.write(parseInt(num3));
+        lineBreak();
+
+    
+    </script>
+
+
+
+
+</body>
+
+</html>

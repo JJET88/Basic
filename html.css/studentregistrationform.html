@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        #submit:hover {
+            color: red;
+            background-color: lightgray;
+        }
+
+        #submit:active {
+            color: greenyellow;
+            background-color: cyan;
+        }
+
+        input [type=text] {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Student Registration Form</h2>
+    <fieldset style="width: 200px; height: 450px; background-color: aqua;">
+        <form>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" value="" autofocus >
+            <div>
+                <label for="fathname">Father Name</label>
+                <input type="text" id="fathname" value="" style="box-shadow: 0 0 10px;">
+            </div>
+            <div>
+                <label for="postal">Postal Address</label>
+                <input type="text" id="postal" value="">
+            </div>
+            <div>  
+                <label for="PA">Personal Address</label>
+                <input type="text" id="PA" value="">
+            </div>
+            <div>
+                <label for="gender">Gender</label>
+                <input type="radio" id="gender" value="male" name="gender">Male
+                <input type="radio" id="gender" value="Female" name="gender">Female
+            </div>
+            <div>
+                <label for="cy">City</label>
+                <select id="cy">
+                    <option>Select...</option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </div>
+            <div>
+                <label for="ce">Course</label>
+                <select id="ce">
+                    <option>Select...</option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </div>
+            <div>
+                <label for="dt">District</label>
+                <select id="dt">
+                    <option>Select...</option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </div>
+            <div>
+                <label for="se">State</label>
+                <select id="se">
+                    <option>Select...</option>
+                    <option></option>
+                    <option></option>
+                    <option></option>
+                </select>
+            </div>
+            <div>
+                <label for="pe">PinCode</label>
+                <input type="text" id="pe" value="">
+            </div>
+            <div>
+                <label for="el">Email</label>
+                <input type="text" id="el" value="">
+            </div>
+            <div>
+                <label for="db">DOB</label>
+                <input type="text" id="db" value="">
+            </div>
+            <div>
+                <label for="mo">Mobile.NO.</label>
+                <input type="text" id="mo" value="">
+            </div>
+
+            <input type="image" src="/icon.jpg" width="30px" height="30px"><br>
+            <input type="reset">
+
+
+
+        </form>
+    </fieldset>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing Color</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            height: 500px;
+            width: 500px;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        I am a div.
+    </div>
+    <button id="btn" onclick="ChangeColor()">Change Color</button>
+
+    <script>
+        var i = 0
+        colors = ["red", "green", "blue", "yellow"]
+        var container = document.querySelector(".container");
+
+        function ChangeColor() {
+            container.style.color = colors[i++]
+
+            if (i > colors.length - 1) { i = 0 }
+
+
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

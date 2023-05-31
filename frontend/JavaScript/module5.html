@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Module 5</title>
+</head>
+<body>
+    <p>Alert Box</p>
+    <button id="btn">Click here!</button>
+    <script>
+        var btn=document.getElementById("btn");
+        btn.onclick = function(){
+            alert("Hello this is alert box");
+        }
+    </script>
+    <br><br>
+    <button onclick="alert('Hello this is also alert box')">Click me</button>
+    <br><br>
+    <button onclick="alertbox()">Click me</button>
+    <script>
+        function alertbox(){
+            alert("Hello this is alert box")
+        };
+
+    </script>
+    <h2>More Event Types</h2>
+    <h2>Change Event Type</h2>
+
+    <label>Choose City
+        <select id="city" name="city">
+            <option value="London">London</option>
+            <option value="Paris">Paris</option>
+            <option value="England">England</option>
+        </select>   
+    </label>
+    <p>You selected: <span id="change-demo"></span></p>
+    <script>
+        var select = document.getElementById("city");
+        select.addEventListener("change",function(){
+          var changeValue= document.getElementById("city").value;
+          document.getElementById("change-demo").innerHTML = changeValue;   
+        });
+    </script>
+    <h1>The mouseover Event</h1>
+    <p id="mouseover-demo">I will change my text when mousover me!</p>
+    <script>
+        var MouseoverElement=document.getElementById("mouseover-demo");
+        MouseoverElement.addEventListener("mouseover",function(){
+            MouseoverElement.innerHTML="Hello World";
+        });
+    </script>
+    <h1>The keypress Event</h1>
+    <textarea id="keypress" ></textarea>
+    <p>The value is:<span id="keypress-demo"></span></p>
+    <script>
+        var keypressEvent = document.getElementById("keypress");
+        keypressEvent.addEventListener("keypress",function(){
+            document.getElementById("keypress-demo").innerText= keypressEvent.value;
+        });
+    </script>
+    <h1>The focus Event and blur Event</h1>
+    <textarea name="" id="area">Write your comment</textarea>
+    <script>
+        var focusEvent = document.getElementById("area");
+        focusEvent.addEventListener("focus",function(){
+            focusEvent.style.backgroundColor = "lightgreen";
+        })
+        focusEvent.addEventListener("blur",function(){
+            focusEvent.style.backgroundColor ="white";
+        })
+    </script>
+    <h1>Resize Event</h1>
+    <p>Window Width: <span id = "window-width"></span></p>
+    <p>Window Height: <span id = "window-height"></span></p>
+    <script>
+        window.addEventListener("resize",function(){
+            document.getElementById("window-width").innerHTML=window.innerWidth;
+            document.getElementById("window-height").innerHTML=window.innerHeight;
+        })
+    
+        document.write(Math.round(2.56));
+    </script>  
+
+
+    
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+	<style>
+		/* @keyframes bounce {
+
+			0%,
+			100% {
+				transform: translateY(0);
+			}
+
+			50% {
+				transform: translateY(-10px);
+			}
+		} */
+
+		/* Apply the animation to an element
+		.element {
+			animation-name: bounce;
+			animation-duration: 2s;
+			animation-timing-function: ease-out;
+			animation-delay: 1s;
+			animation-iteration-count: infinite;
+		} */
+		@keyframes fadeIn {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+
+		/* Apply the animation to an element */
+		.element {
+			animation-name: fadeIn;
+			animation-duration: 1s;
+			animation-timing-function: ease-in;
+			animation-delay: 0s;
+			animation-fill-mode: forwards;
+			animation-iteration-count: infinite;
+		}
+
+		/* Define the keyframes for the animation */
+		@keyframes bounce {
+
+			0%,
+			100% {
+				transform: translateY(0);
+			}
+
+			50% {
+				transform: translateY(-20px);
+			}
+		}
+
+		/* Apply the animation to an element */
+		.ball {
+			animation-name: bounce;
+			animation-duration: 1s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+		}
+
+		/* Define the keyframes for the animation */
+		@keyframes typing {
+			from {
+				width: 0;
+			}
+
+			to {
+				width: 100%;
+			}
+		}
+
+		/* Apply the animation to a text element */
+		.text {
+			overflow: hidden;
+			white-space: nowrap;
+			animation-name: typing;
+			animation-duration: 3s;
+			animation-iteration-count: infinite;
+			animation-timing-function: steps(20, end);
+		}
+
+		/* Define the keyframes for the animation */
+		@keyframes pulse {
+			0% {
+				transform: scale(1);
+			}
+
+			50% {
+				transform: scale(1.2);
+			}
+
+			100% {
+				transform: scale(1);
+			}
+		}
+
+		/* Apply the animation to an element */
+		.button {
+			animation-name: pulse;
+			animation-duration: 2s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+		}
+
+		/* Define the keyframes for the animation */
+		@keyframes spin-grow {
+			0% {
+				transform: rotate(0) scale(1);
+			}
+			25%{
+				transform: rotate(90deg) scale(1);
+			}
+
+			50% {
+				transform: rotate(180deg) scale(1);
+			}
+
+			100% {
+				transform: rotate(360deg) scale(1);
+			}
+		}
+
+		/* Apply the animation to an element */
+		.spin-grow {
+			color: red;
+			animation-name: spin-grow;
+			animation-duration: 5s;
+			animation-timing-function: ease-in-out;
+			animation-iteration-count: infinite;
+		}
+
+		/* Define the keyframes for the animation */
+		@keyframes slide-in {
+			from {
+				transform: translateX(-100%);
+			}
+
+			to {
+				transform: translateX(0);
+			}
+		}
+
+		/* Apply the animation to a menu element */
+		.menu {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 250px;
+			height: 100%;
+			background-color: #fff;
+			z-index: 9999;
+			transform: translateX(-100%);
+			animation-name: slide-in;
+			animation-duration: 3s;
+			animation-delay: 3s;
+			animation-timing-function: ease-in-out;
+
+		}
+
+		/* Apply a transition effect to the menu element */
+		.menu:hover {
+			transform: translateX(0);
+			transition: transform 0.3s ease-in-out;
+		}
+
+		/* Define the keyframes for the animation */
+		@keyframes spin {
+			0% {
+				transform: rotate(0);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		/* Apply the animation to a loader element */
+		.loader {
+			border: 8px solid #f3f3f3;
+			border-top: 8px solid #3498db;
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+			animation-name: spin;
+			animation-duration: 2s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<h3>bounce</h3>
+	<div class="element">Bounce</div>
+
+	<h3>ball bounce</h3>
+	<div class="ball">ball bounce</div>
+	<h3>typing</h3>
+	<div class="text">Typing</div>
+	<h3>pulse</h3>
+	<div class="button">Pulse</div>
+	<h3>Spin grow</h3>
+	<div class="spin-grow">Spin-Grow</div>
+	<h3>slide menu</h3>
+	<div class="menu">Slide Menu </div>
+	<h3>spin</h3>
+	<div class="loader">Spin</div>
+
+
+</body>
+
+</html>

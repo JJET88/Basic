@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Module 1</title>
+</head>
+
+<body>
+    <h2>Show Alert Box</h2>
+    <button id="alert">Show alert box</button>
+
+    <script>
+        document.getElementById("alert").onclick = function () {
+            alert("I am alert box.");
+        }
+    </script>
+    <h2>Change Contanct</h2>
+    <p id="contanct">Hello, World!</p>
+    <button id="contanct-demo">Change contanct</button>
+    <script>
+        document.getElementById("contanct-demo").onclick = function () {
+            document.getElementById("contanct").innerHTML = "I'm JavaScript";
+        }
+    </script>
+    <h2>Change attribute</h2>
+    <img src="/images/nature.jpg" alt="nature" id="attribute" style="width:130px; height:130px;">
+    <br>
+    <button id="attribute-demo">Change Attribute</button>
+
+    <script>
+        document.getElementById("attribute-demo").onclick = function () {
+            document.getElementById("attribute").src = "/images/smiley.gif";
+        }
+    </script>
+    <h2>Change Font style</h2>
+    <p id="font-style">I am a paragraph</p>
+    <button id="font-style-demo">Change font-style</button>
+
+    <script>
+        document.getElementById("font-style-demo").onclick = function () {
+            document.getElementById("font-style").style.color = "lightgreen";
+            document.getElementById("font-style").style.fontSize = "29px";
+            document.getElementById("font-style").style.backgroundColor = "black";
+            document.getElementById("font-style").style.fontFamily = "arial";
+        }
+    </script><br>
+    <h2>JavaScript module-1</h2>
+    <h2>Display Output</h2>
+    <ul>
+        <li>Console</li>
+        <li>Dialog Boxes</li>
+        <li>Writing to HTML Elements</li>
+        <li>Writing to Browser Window</li>
+    </ul>
+
+    <h1>console</h1>
+    <script>
+        var x = 10;
+        var y = 5;
+        var sum = x + y;
+        console.log(sum);
+    </script>
+    <h1>Dialog Boxes</h1>
+    <button onclick="dialogbox()">dialog</button>
+    <script>
+        function dialogbox() {
+
+            alert(sum);
+        }
+
+    </script>
+    <h1>Writing to HTML Element</h1>
+    <p id="writingHTML">Output here</p>
+    <button onclick="outputInHtml()">Output</button>
+    <script>
+        function outputInHtml() {
+            document.getElementById("writingHTML").innerHTML = sum;
+        }
+    </script>
+    <h1>Writing to Browser Window</h1>
+    <button onclick="browserwindow()">Output in browserwindow</button>
+    <script>
+        function browserwindow() {
+            document.write(sum);
+        }
+    </script>
+    <h1>JavaScript Statement</h1>
+    <p id="paragh"></p>
+    <p id="paragh2"></p>
+    <button onclick="writeParagraph()">Write Paragraph</button>
+    <script>
+        function writeParagraph() {
+            document.getElementById("paragh").innerHTML = "Hello";
+            document.getElementById("paragh2").innerHTML = "JavaScript";
+        }
+
+    </script>
+    <h1>Object Datatype</h1>
+    <script>
+        var banana = {
+            color: "yellow",
+            feature: "long",
+            isSweet: "true",
+            quality: 3
+        }
+        document.write(
+            "Banana <br>" +
+            "Color:" + banana.color + "<br>" +
+            "Feature:" + banana.feture + "<br>" +
+            "Is Sweet? :" + banana.isSweet + "<br>" +
+            "Quality:" + banana.quality + "<br>"
+        )
+
+    </script>
+    
+
+
+
+</body>
+
+</html>

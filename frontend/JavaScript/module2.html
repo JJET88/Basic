@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Module2</title>
+</head>
+
+<body>
+    <p>Operators</p>
+    <ul>
+        <li>Arithemetic Operators</li>
+        <li>Assignment Operators</li>
+        <li>Comparison Operators</li>
+        <li>Logical & Conditional Operators</li>
+    </ul>
+
+    <h1>Arithemetic Operators</h1>
+
+    <script>
+        var num1 = 8;
+        var num2 = 2;
+        // (+)
+        var sum = num1 + num2;
+        document.write("Sum of num1 and num2 is" + sum + "<br>");
+        // (-)
+        var different = num1 - num2;
+        document.write("different of num1 and num2 is " + different + "<br>");
+        // (*)
+        var product = num1 * num2;
+        document.write("product of num1 and num2 is" + product + "<br>");
+        // (/)
+        var quotient = num1 / num2;
+        document.write("quotient of num1 and num2 is" + quotient + "<br>");
+        // (%)
+        var remainder = num1 % num2;
+        document.write("remainder of num1 and num2 is" + remainder + "<br>");
+        // (**)
+        var exponential = num1 ** num2;
+        document.write("exponential of num1 and num2 is" + exponential + "<br>");
+        // (++)
+        var increment = num1++;
+        document.write("increment of num1 is" + increment + "<br>");
+        //(--)
+        var decrement = num2--;
+        document.write("decrement of num2 is" + decrement + "<br>");
+
+    </script> 
+    <h1>Assignment Operators</h1>
+    <ul>
+        <li>X = y</li>
+        <li>x +=y (x = x + y)</li>
+        <li>x -=y (x = x - y)</li>
+        <li>x *=y (x = x * y)</li>
+        <li>x /=y (x = x / y)</li>
+        <li>x %=y (x = x % y)</li>
+        <li>x **=y (x = x ** y)</li>
+    </ul>
+    <script>
+        document.write("Assignment <br>");
+        var x = 4;
+        document.write("x is : " + x + "<br>");
+        var y = 8;
+        var x = y;
+        var x=4;
+        document.write ("x = y is:" + x + "<br>");
+
+        document.write("Addition Assignment (+=) <br>");
+        x += y;
+        document.write("x += y is:"+ x + "<br>");
+
+        document.write("Addition Assignment (+=) <br>");
+        x -= y;
+        document.write("x -= y is:"+ x + "<br>");
+
+        document.write("Addition Assignment (+=) <br>");
+        x *= y;
+        document.write("x *= y is:"+ x + "<br>");
+        document.write("Addition Assignment (+=) <br>");
+        x /= y;
+        document.write("x /= y is:"+ x + "<br>");
+        document.write("Addition Assignment (+=) <br>");
+        x **= y;
+        document.write("x **= y is:"+ x + "<br>");
+
+    </script>
+    <h1>Comparison</h1>
+    <script>
+        var x = 5;
+        var y = "5";
+        
+        document.write("x is integer:" + x + "<br>")
+        document.write("y is string :" + y + "<br>")
+        document.write("x > y is :" + (x > y) + "<br>");
+        document.write("x < y is :" + (x < y) + "<br>");
+        document.write("x == y is :" + (x == y) + "<br>");
+        document.write("x >= y is :" + (x >= y) + "<br>")
+        document.write("x <= y is :" + (x <= y) + "<br>");
+        document.write("x === y is :" + (x === y) + "<br>");
+
+    </script>
+
+
+
+
+</body>
+
+</html>

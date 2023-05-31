@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Module 7</title>
+</head>
+<body>
+    <h1>Timeout and interval</h1>
+    <h2>SetTimeOut</h2>
+    <h3>Print hello world after 3 seconds</h3>
+
+    <script>
+        function Break(){
+            document.write("<br>");
+        };
+        function myFunction(){
+            // alert("Hello World");
+        }
+        var timeOut = setTimeout(myFunction,3000);
+        
+        function cancelTimeout(){
+            clearTimeout(timeOut);
+        };
+
+    </script>
+    <button onclick="cancelTimeout()">Cancel timeout</button>
+    <br><hr>
+    <p>This is a paragraph about: <span id="text"></span></p>
+    <button id="btn" onclick="cancel()">Click here</button>
+    <br>
+    <p id="cancel-demo"></p>
+    <script>
+        var button =document.getElementById("btn");
+        var writeText = setTimeout(function(){
+            document.getElementById("text").innerText ="JavaScript timeOut ";
+
+        },
+        3000)
+        function cancel(){
+            clearTimeout(writeText);
+
+        }
+        button.addEventListener("click",function(){
+            document.getElementById("cancel-demo").innerHTML="The topic will not show because of clearing timeOut.";
+        })
+        
+    </script>
+
+    <h1>SetInterval() and StopInterval()</h1>
+    <p id="count">0</p>
+    <script>
+        var x = 0;
+        var interval = setInterval(function(){
+            x +=1;
+            document.getElementById("count").innerText =x;
+            
+        },1000); 
+        function stop(){
+            clearInterval(interval);
+        }
+    </script>
+    <button onclick="stop()">Stop interval</button>
+    <br><hr>
+    <h1>Regular Expressions</h1>
+    <h1>Search()</h1>
+    <script>
+        var string="Hello JavaScript and I like JavaScript programming.";
+        var search = string.search("JavaScript");
+        document.write(search);
+        Break();
+        var search2= string.search(/javascript/i);
+        document.write(search2);
+        Break();
+        document.write("<h1>Replace()</h1>");
+        var replace =string.replace("JavaScript","HTML");
+        document.write(replace);
+        Break();
+        var replace2 =string.replace(/JavaScript/g,"HTML");
+        document.write(replace2);
+    </script>
+    <h1>Exception Handling</h1>
+    <p>This is the exception handling.</p>
+    
+    <script>
+        var a = 500/60;
+        doucment.write(a);
+        
+    </script>
+
+    
+</body>
+</html>

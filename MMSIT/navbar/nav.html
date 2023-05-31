@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navagation Bar</title>
+    <style>
+
+        .form {
+            /* border: 1px solid black; */
+            border-radius: 10px;
+
+        }
+
+        .unorder,
+        .menu {
+            list-style-type: none;
+            display: flex;
+            /* border: 1px solid black; */
+            justify-content: flex-end;
+            margin: 20px;
+            padding: 5px;
+            gap: 10px;
+
+        }
+
+
+        .menu {
+            display: none;
+        }
+
+
+        li {
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        @media screen and (max-width:500px) {
+            .unorder {
+                display: none;
+            }
+
+            .menu {
+                display: inline-block;
+            }
+
+            .open {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                background-color: antiquewhite;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+        <ul class="unorder open" id="unorder">
+            <li>
+                <a href="#p">Home</a>
+            </li>
+            <li>
+                <a href="#">Project</a>
+            </li>
+            <li>
+                <a href="#">Testimonials</a>
+            </li>
+            <li>
+                <a href="#">Services</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+
+        </ul>
+        <div class="menu">
+            <a href="#unorder">Hello</a>
+        </div>
+    </div>
+
+    <script src="nav.js"></script>
+
+
+</body>
+
+</html>

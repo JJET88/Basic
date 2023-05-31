@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Module10</title>
+</head>
+<body>
+    <h1>this keyword</h1>
+    <p id="demo"></p>
+    <script>
+        var fruit = {
+            name : "mango",
+            color : "yellow",
+            showfruit : function(){
+                document.getElementById("demo").innerText = this.name + this.color;
+            }
+        }
+        fruit.showfruit();
+    </script>
+    <h1>Global Object</h1>
+    <script>
+        window.document.write("Hello World");
+        var city = "London";
+        function myfunc(){
+            var x = this;
+            x.alert(x.city);
+        }
+        // myfunc();
+    </script>
+    <h1>this in an Event Handler</h1>
+    <button  id="btn" >click to hide</button>
+    <script>
+        var mybtn = document.getElementById("btn");
+    mybtn.onclick =function(){
+        this.style.display = "none";
+    }
+    </script>
+    <h1>Local & Global Variables</h1>
+    <script>
+        var globalCar = "BMW";
+        function  myfunction1(){
+            var localCar = "TOYOTA";
+            document.write(localCar);
+            
+        }
+        myfunction1();
+        function linebreak(){
+            document.write("<br>");
+        };
+        linebreak();
+       
+        linebreak();
+        document.write(globalCar);
+        
+    </script>
+    <p>Global Variable:<span id="span-demo"></span></p>
+    <script>
+         document.write(globalCar);
+         linebreak();
+        document.write("Hello World");
+        linebreak();
+        function Span(){
+            document.getElementById("span-demo").innerHTML =globalCar;
+        }
+        Span();
+    </script>
+    <h1>JS JSON(JavaScript Object Notation)</h1>
+    <script>
+       var text = `{
+           "firstName": "David",
+           "lastName" : "John",
+           "age" : "20",
+           "occupation": "student"
+       }`;
+       var obj = JSON.parse(text);
+       document.write(obj.firstName);
+
+
+       linebreak();
+       var obj = `{
+           "firstName": "David",
+           "lastName" : "John",
+           "age" : "20",
+           "occupation": "student"
+       }`;
+       var text = JSON.stringify(obj);
+       document.write(text);
+    </script> 158 
+    
+ 
+</body>
+</html>

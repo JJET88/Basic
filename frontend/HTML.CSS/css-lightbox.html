@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>CSS LIGHT BOX</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        /* light box */
+        .lightbox{
+            visibility: hidden;
+            display: table;
+            /* Make the lightbox occupy the entire page */
+            position: fixed;
+            /* Slide Down Effect */
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            transition-duration:2.3s;
+        }
+        .lightbox:target{
+            visibility: visible;
+            top: 0;
+        }
+        .lightbox-content{
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .close{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 20px;
+            font-weight: 300;
+            text-decoration: none;
+            color: white;
+        }
+        .lightbox-content img{
+            max-width: 100%;
+            height: 100vh;
+        }
+        /* css for image gallery */
+        .image-container{
+            margin: 0 auto;
+            width: 50%;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.30),0 11px 8px rgba(0,0,0,0.22);
+            margin-bottom: 20px;
+            transition-duration: 1s;
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+        }
+        .image-container:hover {
+            width: 40%;
+            box-shadow: 0 36px 36px rgba(0,0,0,0.3),0 34px 41px rgba(0,0,0,0.7);
+        }
+        /* CSS For Accordion */
+        .accordion-container{
+            margin: 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+        input[type="radio"]{
+            display: none;
+        }
+        label{
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid black;
+            color: white;
+            background: #0076ff;
+            /* z-index:2; */
+            z-index: 2;
+        }
+        .accordion:last-child>label,.accordion:last-child>.accordion-content{
+            border: none;
+        }
+        .accordion-content{
+            border-bottom: 3px solid rgb(209, 33, 33);
+            padding: 0;
+            opacity: 0;
+            overflow: hidden;
+            z-index: -1;
+            transition: 0.3s linear;
+        }
+        /* select the accordion content when the label is clicked on */
+        input:checked ~ .accordion-content{
+            padding: 15px;
+            opacity: 1;
+            max-height: 500px;
+            z-index: 1;
+        }
+        /* CSS for counter */
+        body{
+            /* initialize the counter -start 0 */
+            counter-reset: headings;
+        }
+        h3{
+            margin-left: 30px;
+        }
+        h3::before{
+            counter-increment: headings;
+            content: "Section" counter(headings) ":";
+        }
+        .row::after {
+            content: "";
+            display: block;
+            clear: both;
+        
+        }
+        [class*="col-"]{
+            float: left;
+            height: 200px;
+            background: lightgray;
+            border-right: 1px solid black;
+        }
+        .col-1{width: 8.3%}
+        .col-2{width: 16%}
+        .col-3{width: 25%}
+        .col-4{width: 33.3%}
+        .col-5{width: 41%}
+        .col-6{width: 50%}
+        .col-7{width: 58%}
+        .col-8{width: 66%}
+        .col-9{width:  75%}
+        .col-10{width: 83%}
+        .col-11{width:  91.6%}
+        .col-12{width: 100%}
+
+        
+
+
+    </style>
+</head>
+<body>
+    <h2>Light Box</h2>
+    <a href="#light-box-demo">Show Light Box</a>
+    <div class="lightbox" id="light-box-demo">
+        <a href="#" class="close">CLOSE</a>
+        <div class="lightbox-content">
+            <img src="/images/nature.jpg" alt="">
+        </div>
+    </div>
+    <h2>CSS Image Gallery</h2>
+    <div class="gallery">
+        <div class="image-container">
+            <img src="/images/icon.jpg" alt="">
+            <p class="image-description">I am Image Description</p>
+        </div>
+        <div class="image-container">
+            <img src="/images/icon.jpg" alt="">
+            <p class="image-description">I am Image Description</p>
+        </div>
+        <div class="image-container">
+            <img src="/images/icon.jpg" alt="">
+            <p class="image-description">I am Image Description</p>
+        </div>
+    </div>
+    <h2>Accordion</h2>
+    <div class="accordion-container">
+        <div class="accordion">
+            <input type="radio" name="accordion" id="accordion1" checked>
+            <label for="accordion1"> >> Accordion #1</label>
+            <div class="accordion-content">
+                 Accordion no.1 content goes here. Accordion no.1 content goes here. Accordion no.1 content goes here.
+                 Accordion no.1 content goes here. Accordion no.1 content goes here. Accordion no.1 content goes here.
+                 Accordion no.1 content goes here. Accordion no.1 content goes here. Accordion no.1 content goes here.
+            </div>
+        </div>
+        <div class="accordion">
+            <input type="radio" name="accordion" id="accordion2" >
+            <label for="accordion2"> >> Accordion #2</label>
+            <div class="accordion-content">
+                 Accordion no.2 content goes here. Accordion no.2 content goes here. Accordion no.2 content goes here.
+                 Accordion no.2 content goes here. Accordion no.2 content goes here. Accordion no.2 content goes here.
+                 Accordion no.2 content goes here. Accordion no.2 content goes here. Accordion no.2 content goes here.
+            </div>
+        </div>
+        <div class="accordion">
+            <input type="radio" name="accordion" id="accordion3" >
+            <label for="accordion3"> >> Accordion #3</label>
+            <div class="accordion-content">
+                 Accordion no.3 content goes here. Accordion no.3 content goes here. Accordion no.3 content goes here.
+                 Accordion no.3 content goes here. Accordion no.3 content goes here. Accordion no.3 content goes here.
+                 Accordion no.3 content goes here. Accordion no.3 content goes here. Accordion no.3 content goes here.
+            </div>
+        </div>
+        <div class="accordion">
+            <input type="radio" name="accordion" id="accordion4" >
+            <label for="accordion4"> >> Accordion #4</label>
+            <div class="accordion-content">
+                 Accordion no.4 content goes here. Accordion no.4 content goes here. Accordion no.4 content goes here.
+                 Accordion no.4 content goes here. Accordion no.4 content goes here. Accordion no.4 content goes here.
+                 Accordion no.4 content goes here. Accordion no.4 content goes here. Accordion no.4 content goes here.
+            </div>
+        </div>
+    </div>
+    <h2>Counter</h2>
+     
+    <h3>Introduction</h3>
+    <h3>Methodology</h3>
+    <h3>Result and Discussions</h3>
+    <h3>Conclusions</h3>
+
+    
+    <h2>CSS Columns</h2>
+    <p>Two Column Layout with equal width</p>
+    <div class="row">
+        <div class="col-6"></div>
+        <div class="col-6"></div>
+    </div>
+
+    <p>Three Column Layout with equal width</p>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+        <div class="col-4"></div>
+    </div>
+
+    <p>Four Column Layout with equal width</p>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-3"></div>
+        <div class="col-3"></div>
+        <div class="col-3"></div>
+    </div>
+    <p>Two Column Layout (first is smaller)</p>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-8"></div>
+    </div>
+    <p>Two Column Layout (first is bigger)</p>
+    <div class="row">
+        <div class="col-8"></div>
+        <div class="col-4"></div>
+    </div>
+
+    <p>Twelve Column Layout with equal width</p>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+        <div class="col-1"></div>
+    </div>
+    
+
+
+
+    
+</body>
+</html>

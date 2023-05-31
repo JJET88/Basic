@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Module 6</title>
+</head>
+
+<body>
+    <h1>For Loop</h1>
+    <script>
+        var fruits = ["mango", "orange", "apple", "banana", "avocado", "watermelon"];
+        for (var i = 0; i < fruits.length; i++) {
+            document.write(fruits[i] + " ");
+        };
+
+        function lineBreak() {
+            document.write("<br>")
+        };
+        for (fruit of fruits) {
+            document.write(fruit + ",");
+        }
+        lineBreak();
+        var string = "How are you  and where are you from?";
+        for (x of string) {
+            document.write(x + ",");
+        }
+
+    </script>
+    <h1>While Loop</h1>
+    <script>
+        var x = 0;
+        while (x < 5) {
+            document.write("Hello World" + "<br>");
+            x++;
+        }
+    </script>
+    <h1>Do while loop</h1>
+    <script>
+        var y = 0;
+        do {
+            document.write("I love coding");
+            y++;
+        }
+        while (y<5);
+        
+        lineBreak();
+        var cities = ["Yangon", "Mandalay", "Sagaing", "Myeik", "Bago"]; 
+        var len = cities.length;
+        var z = 0;
+        do {
+            document.write(cities[z]);
+            z++;
+        }  
+        while(z<len);       
+
+
+    </script>
+
+
+
+</body>
+
+</html>

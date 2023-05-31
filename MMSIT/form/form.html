@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <form action="" class="form">
+
+        <fieldset class="fieldset">
+            <legend class="legend">Register Form</legend>
+
+            <div class="div">
+                <label class="label" for="name">Your Name</label>
+                <input class="input" type="text" id="name" name="your-name" placeholder="Enter your Name...">
+            </div>
+            <div class="div">
+                <label class="label" for="email">Your Email</label>
+                <input class="input" type="email" id="email" email="your-email" placeholder="Enter your Email...">
+            </div>
+            <div class="div">
+                <label class="label" for="password">Your Password</label>
+                <input minlength="8" class="input" type="password" id="password" password="your-password">
+            </div>
+            <div class="div">
+                <label class="label" for="role">Select Your Role</label>
+                <select  class="select" name="role" id="role">
+                    <option value="frontend">Frontend Developer</option>
+                    <option value="backend">Backend Developer</option>
+                    <option value="UI">UI Designer</option>
+                </select>
+            </div>
+            <div class="div">
+                <label class="label" for="address">Address</label>
+                <textarea class="textarea" name="address" id="address"  rows="7"></textarea>
+            </div>
+            <button class="button">Register</button>
+
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

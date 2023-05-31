@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Form</title>
+    <style>
+        h2 {
+            border: 1px solid black;
+            text-align: center;
+            background-color: tomato;
+            color: white;
+            border-radius: 10px;
+            width: 300px;
+            
+        }
+        .form {
+            border: 1px solid lightpink;
+            background-color: lightpink;
+            width: max-content;
+
+
+        }
+        
+    </style>
+
+
+
+</head>
+
+<body>
+    <form class="form">
+        <h2>Blood Donation Form</h2>
+        <br>
+        <div>
+            <label for="fn"><b><i>First Name</i></b></label><br>
+            <input type="text" id="fn" placeholder="Your First Name">
+        </div>
+        <div>
+            <label for="ln"><b><i>Last Name</i></b></label><br>
+            <input type="text" id="ln" placeholder="Your Last Name">
+        </div>
+        <div>
+            <label for="em"><b><i>Email</i></b></label><br>
+            <input type="email" id="em" placeholder="email@example.com">
+        </div>
+        <div>
+            <label for="mp"><b><i>Mobile No.</i></b></label><br>
+            <input type="phone number" id="mp" placeholder="03XX-XXXXXXX">
+        </div>
+        <div>
+            <label for="op"><b><i>Occupation</i></b></label><br>
+            <input type="text" id="op" placeholder="Your Occupation">
+        </div>
+        <div>
+            <label for="ad"><b><i>Address</i></b></label><br>
+            <input style="height: 30px;" type="text" id="ad" placeholder="Mention your permanent address here">
+        </div>
+        <div>
+            <label for="BG"><b><i>Blood Group</i></b></label><br>
+            <select id="BG">
+                <option>A</option>
+                <option>B</option>
+                <option>O</option>
+                <option>AB</option>
+            </select>
+
+        </div>
+        <p><b><i>Have you ever donated blood before?</i></b></p>
+        <label for="yes">Yes</label>
+        <input type="radio" id="yes" name="choose">
+        <label for="no">No</label>
+        <input type="radio" id="no" name="choose">
+        <div>
+
+            <input style="background-color: rgb(195, 12, 43); width: 180px;" type="submit" value="Register" >
+        </div>
+
+
+
+    </form>
+
+
+</body>
+
+</html>

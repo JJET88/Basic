@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+body{
+    background-color: black;
+}  
+#clock {
+    color: aqua;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 60px;
+    letter-spacing: 7px;
+    font-family: 'Tilt Prism', cursive;
+    }

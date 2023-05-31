@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Nodes, Navigation, HTML</title>
+</head>
+
+<body>
+    <h1>Sibling</h1>
+    <div id="container2">
+        <h1>Hello</h1>
+        <p id="p-demo">this is a paragraph</p>
+        <a href="#">this is a link</a>
+
+        <script>
+            var paragraph = document.getElementById("p-demo");
+
+            paragraph.parentElement.style.backgroundColor = "lightgreen";
+            paragraph.previousElementSibling.style.color = "gold";
+            paragraph.nextElementSibling.style.backgroundColor = "lightgreen";
+
+        </script>
+    </div>
+    <h1>Parent & Children</h1>
+    <div id="container1">
+        <h1>Hello</h1>
+        <p id="p-demo">this is a paragraph</p>
+        <a href="#">this is a link</a>
+        <h2>This is the second heading</h2>
+
+    </div>
+    <script>
+        var div = document.getElementById("container1");
+        div.firstElementChild.style.color = "blue";
+        div.lastElementChild.style.fontSize = "50px";
+        div.children[1].style.color = "gray";
+        div.children[2].style.backgroundColor = "lightgray";
+    </script>
+    <h1>JS DOM HTML</h1>
+    <ul id="unorder">
+        <li>Mango</li>
+        <li>Apple</li>
+        <li>Orange</li>
+    </ul>
+    <button onclick="Get()">Get list</button><br>
+    <button onclick="Replace()">Replace list</button>
+    <script>
+
+        function Get() {
+            var list = document.getElementById("unorder");
+            alert(list.innerHTML);
+        }
+        function linebreak() {
+            document.write("<br>")
+        };
+        function Replace() {
+            var list = document.getElementById("unorder");
+            list.innerHTML = "<li>Avogodo</li>" +
+                "<li>Pineapple</li>" +
+                "<li>Banana</li>"
+        }
+    </script>
+    <h1>Creating Element(Nodes)</h1>
+    <div id="container3">
+
+    </div>
+    <script>
+        var element = document.createElement("P");
+        var textNode = document.createTextNode("Hello World");
+        element.appendChild(textNode);
+        var div = document.getElementById("container3");
+        div.appendChild(element);
+
+    </script>
+    <h1>Inserting to Element</h1>
+    <ul id="list">
+        <li>Mango</li>
+        <li>Apple</li>
+        <li>Orange</li>
+    </ul><br>
+    <button onclick="Prepend()">Prepend</button><br>
+    <button onclick="Append()">Append</button><br>
+    <button onclick="Remove()">Remove</button>
+
+    <script>
+
+        var addlist = document.getElementById("list");
+        function Prepend() {
+            var element = document.createElement("li");
+            var textinput = document.createTextNode("Strawberry");
+            element.appendChild(textinput);
+            addlist.prepend(element);
+        }
+        function Append() {
+            var element = document.createElement("li");
+            var input = document.createTextNode("grape");
+            element.appendChild(input);
+            addlist.append(element);
+        }
+        function Remove(){
+            var firstchild = addlist.firstElementChild;
+            firstchild.remove();
+        }
+    </script>
+    <h1>Getting Attribute Value</h1>
+    <a href="https://www.google.com" id="link-demo">www.google.com</a><br>
+    <button onclick="Showattribute()">Show Attribute</button>
+    <button onclick="Setattribute()">Set Attribute</button>
+    <button onclick="Reset()">Reset Attribute</button>
+
+    <script>
+        
+        var a = document.getElementById("link-demo");
+        function Showattribute(){
+            var href =a.getAttribute("href");
+            alert(href);
+        }
+        function Setattribute(){
+            var set = a.setAttribute("href","https://www.youtube.com");
+            a.innerHTML ="www.youtube.com"
+        }
+        function Reset(){
+            var set = a.setAttribute("href","https://www.google.com");
+            a.innerHTML ="www.google.com"
+        }
+        linebreak();
+        var button = document.getElementsByTagName("button");
+        for (var i = 0; i<button.length; i++){
+            button[i].style.backgroundColor="lightblue";
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

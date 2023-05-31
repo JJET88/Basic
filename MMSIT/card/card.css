@@ -1,0 +1,39 @@
+:root{
+  --font-family: 'Times New Roman', Times, serif;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+.card-container{
+    display: inline-block;
+    width: 150px;
+    border: 1px solid black;
+    margin:10px;
+    padding: 10px;
+    
+
+}
+.title{
+    text-align: center;
+}
+.content{
+    padding: 10px; 
+}
+.radius{
+    border-radius: 20px;
+}
+.img-size{
+    width: 100%;
+    aspect-ratio:1/1;
+    height: auto;
+    object-fit:cover;
+    object-position: center;
+    margin-top: -70px;
+}
+.top{
+    margin-top:60px;
+}
+

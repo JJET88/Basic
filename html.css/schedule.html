@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Schedule</title>
+    <style>
+        tr,
+        td,
+        th {
+            border: 1px solid white;
+            border-collapse: collapse;
+            border-radius: 15px;
+            color: red;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .icon {
+            background-image: url(/icon.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <table class="icon">
+        <tr>
+            <th rowspan="3" class="center" style="font-size: 30px;">day</th>
+            <th colspan="3" class="center">seminar</th>
+        </tr>
+        <tr>
+            <th colspan="2" class="center">schedule</th>
+            <th rowspan="2" class="center">topic</th>
+        </tr>
+        <tr>
+            <th class="center">begin</th>
+            <th class="center">end </th>
+        </tr>
+        <tr>
+            <td rowspan="2">Monday</td>
+            <td rowspan="2">8:am</td>
+            <td rowspan="2">5:pm</td>
+            <td class="center">Introduction to XML</td>
+        </tr>
+        <tr>
+            <td class="center">Validity: DTD and Relax NG</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Tuesday</td>
+            <td>8:am</td>
+            <td>11:00pm</td>
+            <td class="center">XPath</td>
+        </tr>
+        <tr>
+            <td>11:00am</td>
+            <td>2:00pm</td>
+            <td rowspan="2" class="center">XSL Transformatics</td>
+        </tr>
+        <tr>
+            <td>2:00pm</td>
+            <td>5:00pm</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>8:00am</td>
+            <td>12:00pm</td>
+            <td class="center">XSL Formatting Objects</td>
+        </tr>
+
+    </table>
+
+
+</body>
+
+</html>

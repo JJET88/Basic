@@ -1,0 +1,20 @@
+:root{
+    font-size: 14px; 
+    --border:rgb(255, 128, 0);
+    --bgcolor:lightgreen;
+    
+}
+
+
+table{
+    border-collapse:collapse;
+} 
+
+th,td{
+    color:gray;
+    border: 1px solid var(--border);
+    text-align: center;
+    /* background-color: var(--bgcolor); */
+
+}
+/*  */

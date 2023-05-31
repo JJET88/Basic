@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Module4</title>
+</head>
+
+<body>
+    <h1>Array</h1>
+    <script>
+        function makeHeading(title) {
+            document.write("<h2>" + title + "</h2>");
+        }
+        function lineBreak() {
+            document.write("<br>");
+        }
+        var names = ["Harry", "Ron", "Jame", "Paul"];
+        document.write(names);
+        lineBreak();
+        var addnames = names.push("Hermonies", "Draco");
+        document.write(names);
+        lineBreak();
+        document.write(names.length);
+        lineBreak();
+        var removename = names.pop();
+        document.write(names);
+        lineBreak();
+        var removefront = names.shift();
+        document.write(names);
+        lineBreak();
+        var addfront = names.unshift("David");
+        document.write(names);
+        lineBreak();
+        document.write(names.length);
+        lineBreak();
+        document.write(names[names.length - 1]);
+        lineBreak();
+        makeHeading("loop for  Array");
+        for (var i = 0; i < names.length; i++) {
+            document.write(names[i]);
+        }
+        lineBreak();
+        document.write(typeof names);
+    </script>
+
+    <h1>Array Method</h1>
+    <script>
+        makeHeading("ForEach Method");
+        var fruits = ["apple", "orange", "banana", "avacodo", "grape"];
+
+        fruits.forEach(function (val, i, arr) {
+            document.write(i + ":" + val + "<br>");
+        })
+
+        lineBreak();
+        makeHeading("join()");
+        document.write(fruits.join());
+        makeHeading("split() >> string to array");
+        var string = "Hello -World -and -Welcome ";
+        document.write(string);
+        lineBreak();
+        document.write(string.split("-"));
+        lineBreak();
+
+        var num1 = [1, 2, 3, 4, 5];
+        var num2 = [6, 7, 8, 9, 10];
+        document.write(num1.concat(num2));
+
+        lineBreak();
+        var cities = ["Yangon", "Mandalay", "Sagaing", "Myeik", "Bago"];
+        document.write(cities.indexOf("Myeik"));
+        lineBreak();
+        document.write(cities.slice(2, 4));
+    </script>
+
+    <h1>JavaScript Sorting</h1>
+    <script>
+        makeHeading("sorting");
+        var fruits = ["banana", "orange", "apple", "avocado"];
+        document.write(fruits.sort());
+        lineBreak();
+        var num = [3, 5, 2, 6, 8, 4, 1];
+        document.write(num);
+        lineBreak();
+        document.write(num.sort(function (a, b) {
+            return a - b;
+        }))
+        lineBreak();
+        document.write(num.sort(function (a, b) {
+            return b - a;
+        }))
+        makeHeading("sorting objects");
+        var people = [
+            {
+                name: "Jame",
+                age: 24
+            },
+            {
+                name: "Harry",
+                age: 16
+            },
+            {
+                name: "Draco",
+                age: 20
+            }
+        ];
+        people.sort(function (a, b) {
+            return a.age - b.age;
+        });
+        for (var i = 0; i < people.length; i++) {
+            document.write(people[i].name +" :" +people[i].age +"<br>")
+        };
+        var fruits = ["apple", "orange", "banana", "avacodo", "grape"];
+        document.write(fruits);
+        lineBreak();
+        document.write(fruits.reverse());
+        lineBreak();
+
+    </script>
+    <h1>Js Array Iteration</h1>
+    <script>
+        var number = [10,20,30,40,50];
+        document.write(number.map(function(value){
+            return value *2;
+        }))
+
+        lineBreak();
+        document.write(number.filter(function(value){
+            return value <30;
+        }))
+
+    </script>
+ 
+
+
+</body>
+
+</html>

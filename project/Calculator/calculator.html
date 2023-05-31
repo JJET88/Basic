@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <title>Calculator Project</title>
+    <style>
+        button{
+            display: inline-block;
+            width: 40px;
+            transition: 0.5s; 
+            background-color: rgb(12, 202, 245,0.2);
+            
+        
+        }
+        button:active{
+            color: rgb(66, 49, 1);
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <div> 
+    <h1>Calculator</h1>
+
+    <input type="text" id="inputBox">
+    <br>
+    <br>
+    <button onclick="addNumber(1)">1</button>
+    <button onclick="addNumber(2)">2</button>
+    <button onclick="addNumber(3)">3</button>
+    <button onclick="addNumber('+')">+</button>
+    <br>
+    <button onclick="addNumber(4)">4</button>
+    <button onclick="addNumber(5)">5</button>
+    <button onclick="addNumber(6)">6</button>
+    <button onclick="addNumber('-')">-</button>
+    <br>
+    <button onclick="addNumber(7)">7</button>
+    <button onclick="addNumber(8)">8</button>
+    <button onclick="addNumber(9)">9</button>
+    <button onclick="addNumber('*')">*</button>
+    <br>
+    <button onclick="addNumber(0)">0</button>
+    <button onclick="addNumber('/')">/</button>
+    <button onclick="clearInput()">C</button>
+    <button onclick="calculate()">=</button>
+</div>
+
+
+    <script src="./caculator.js"></script>
+</body>
+</html>
